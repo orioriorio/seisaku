@@ -18,11 +18,18 @@ Faker::Config.locale = :ja
   )
 end
 
+Post.create(position_name: "社長")
+Post.create(position_name: "部長")
+Post.create(position_name: "課長")
+Post.create(position_name: "平社員")
+
+
 100.times do |index|
   Customer.create(
     family_name: Faker::Name.last_name,
     given_name: Faker::Name.first_name,
     email: Faker::Internet.email,
     company_id: rand(3) + 1
+    post_id: rand(1..4)
   )
 end
