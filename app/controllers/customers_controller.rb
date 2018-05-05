@@ -3,8 +3,8 @@ class CustomersController < ApplicationController
  before_action :set_customer,only: [:edit, :update, :show, :destroy]
 
   def index
-    @customers = Customer.page(params[:page])
-  end
+    @q = Customer.ransack(params[:q])
+        @customers = @q.result.page(params[:page])  end
 
   def new
     @customer = Customer.new
@@ -35,7 +35,7 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer.destroy
-    redirect_to costomers_path
+    redirect_to customers_path
   end
 
   private
