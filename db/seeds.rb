@@ -18,7 +18,7 @@ Faker::Config.locale = :ja
   )
 end
 
-Post.create(position_name: "社長")
+Post.create(position_name: "取締役")
 Post.create(position_name: "営業")
 Post.create(position_name: "エンジニア")
 Post.create(position_name: "その他")
@@ -29,7 +29,7 @@ Post.create(position_name: "その他")
     family_name: Faker::Name.last_name,
     given_name: Faker::Name.first_name,
     email: Faker::Internet.email,
-    company_id: rand(3) + 1,
+    company_id: rand(30) + 1,
     post_id: rand(1..4)
   )
 end
