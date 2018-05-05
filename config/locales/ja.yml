@@ -2,14 +2,14 @@
 ja:
   activerecord:
     models:
-      customer: "顧客"
+      customer: "登録情報"
     attributes:
       customer:
         family_name: "姓"
         given_name: "名"
         email: "メールアドレス"
-        company_id: "所属会社"
-        post_id: "役職"
+        company_id: "所属"
+        post_id: "仕事内容"
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

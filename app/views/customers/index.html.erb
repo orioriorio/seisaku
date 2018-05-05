@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1>登録者情報一覧</h1>
+    <h1>名刺一覧</h1>
   </div>
   <div class="col-lg-6">
-    <p>登録者情報が表示されます。</p>
+    <p>登録済みの名刺情報を表示します</p>
   </div>
   <div class="col-lg-6">
-    <%= link_to '登録', new_customer_path, class: "btn btn-default pull-right" %>
+    <%= link_to '新規名刺情報を登録する', new_customer_path, class: "btn btn-default pull-right" %>
   </div>
   <%= search_form_for @q do |f| %>
    <div class="row">
@@ -24,21 +24,21 @@
      </div>
      <div class="col-sm-3 col-xs-12">
        <div class="form-group">
-         <%= f.label :email_cont, '電子メール' %>
+         <%= f.label :email_cont, 'メールアドレス' %>
          <%= f.search_field :email_cont, class: "form-control input-sm" %>
        </div>
      </div>
      <div class="col-sm-3 col-xs-12">
        <div class="form-group">
-         <%= f.label :company_name_cont, '会社名' %>
+         <%= f.label :company_name_cont, '所属' %>
          <%= f.search_field :company_name_cont, class: "form-control input-sm" %>
        </div>
      </div>
    </div>
    <div class="row">
      <div class="col-xs-12 text-center">
-       <%= f.submit "検索", class: "btn btn-default" %>
-       <%= link_to "リセット", request.path, class:"btn btn-default" %>
+       <%= f.submit "名前、会社を検索", class: "btn btn-default" %>
+       <%= link_to "元に戻す", request.path, class:"btn btn-default" %>
      </div>
    </div>
  <% end %>
@@ -47,9 +47,9 @@
     <thead>
       <th><%= sort_link(@q, :family_name, "姓") %></th>
       <th><%= sort_link(@q, :given_name, "名") %></th>
-      <th><%= sort_link(@q, :email, "電子メール") %></th>
-      <th><%= sort_link(@q, :company_name, "所属会社") %></th>
-      <th><%= sort_link(@q, :post_position_name, "役職") %></th>
+      <th><%= sort_link(@q, :email, "メールアドレス") %></th>
+      <th><%= sort_link(@q, :company_name, "所属") %></th>
+      <th><%= sort_link(@q, :post_position_name, "仕事内容") %></th>
     </thead>
     <tbody>
       <% @customers.each do |customer| %>
@@ -59,7 +59,8 @@
           <td><%= customer.email %></td>
           <td><%= customer.company.name %></td>
           <th><%= customer.post.position_name %></th>
-          <td><%= link_to '詳細', customer, class: "btn btn-default btn-xs" %></td>
+          <td><%= link_to '名刺を表示する', customer, class: "btn" %></td>
+          <td><%= link_to '登録情報の編集', customer, class: "btn btn-default btn-xs" %></td>
         </tr>
       <% end %>
     </tbody>

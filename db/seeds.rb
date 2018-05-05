@@ -19,9 +19,9 @@ Faker::Config.locale = :ja
 end
 
 Post.create(position_name: "社長")
-Post.create(position_name: "部長")
-Post.create(position_name: "課長")
-Post.create(position_name: "平社員")
+Post.create(position_name: "営業")
+Post.create(position_name: "エンジニア")
+Post.create(position_name: "その他")
 
 
 100.times do |index|
