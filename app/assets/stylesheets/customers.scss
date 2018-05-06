@@ -8,10 +8,16 @@
 
 navbar-brand{
   color:blue;
+  font-weight: bold;
 }
 
 .btn-default:hover {
-    color: #eccb12;
+    color: orange;
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+
+.btn-default{
+  box-shadow: 5px 5px blue;
+  border-radius:50px;
 }

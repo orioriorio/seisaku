@@ -7,6 +7,6 @@ class CreateCustomers < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :customers, :email, unique: truebin/rails
+    add_index :customers, :email, unique: true
   end
 end

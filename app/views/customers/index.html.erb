@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-lg-12">
 
-    <h1><i class="fa fa-book">
+    <h1 style="text-align: center;"><i class="fa fa-book">
 </i>名刺一覧<%= image_tag 'logo.jpg', class: "navbar-brand" %></h1>
   </div>
   <div class="col-lg-6">
-    <p>登録済みの名刺情報を表示します</p>
+    <p  style="text-align: center;">登録済みの名刺情報を表示します</p>
   </div>
   <div class="col-lg-6">
     <%= link_to '新規名刺情報を登録する', new_customer_path, class: "btn btn-default pull-right" %>
@@ -64,7 +64,7 @@
           <td><%= customer.company.name %></td>
           <th><%= customer.post.position_name %></th>
           <td><%= link_to '名刺を表示する', customer, class: "btn" %><i class="fa fa-address-card"></i></td>
-          <td><%= link_to '登録情報の編集', customer, class: "btn btn-default btn-xs" %></td>
+          <td style="color:red;"><%= link_to '登録情報の編集', customer, class: "btn btn-default btn-xs" %></td>
         </tr>
       <% end %>
     </tbody>

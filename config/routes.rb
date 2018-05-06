@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'tickets#index'
   devise_for :users
 resources :customers
 root "customers#index"
