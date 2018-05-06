@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="background-color:deepskyblue;">
   <div class="col-sm-8 col-sm-offset-2">
     <h2>新規アカウントを作成する</h2>
 
@@ -21,6 +21,7 @@
 
       <div class="form-group">
         <%= f.label :password, "パスワード" %>
+        <i class="fa fa-key"></i>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> 文字以上が必要です)</em>
         <% end %><br />

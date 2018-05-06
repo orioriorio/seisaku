@@ -1,6 +1,7 @@
 <%= form_with model: customer, local: true do |form| %>
 <% if customer.errors.any? %>
     <div class="alert alert-danger">
+      <i class="fa fa-evclamation-triangle"></i>
       <p><b><%= customer.errors.count %>件のエラーがあります</b></p>
 
       <ul>
